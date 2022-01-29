@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Circular;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/circular/light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Circular;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/circular/normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Circular;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/circular/bold.woff2') format('woff2');
+}
