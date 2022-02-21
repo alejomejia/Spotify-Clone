@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
+import resetCSS from './reset'
 
 export default createGlobalStyle`
+  ${resetCSS}
+
   * {
     margin: 0;
     padding: 0;
