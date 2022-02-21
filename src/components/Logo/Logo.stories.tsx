@@ -6,10 +6,19 @@ export default {
   title: 'Components/Logo',
   component: Logo,
   decorators: [(Story) => <Story />],
+  argTypes: {
+    fill: { control: 'color' },
+  },
 } as Meta
 
-const Template: Story<LogoProps> = (args) => <Logo {...args} />
+const Template: Story<LogoProps> = (args) => (
+  <div style={{ maxWidth: 240 }}>
+    <Logo {...args} />
+  </div>
+)
 
 export const Default = Template.bind({})
 
-Default.args = {}
+Default.args = {
+  fill: '#000',
+}
