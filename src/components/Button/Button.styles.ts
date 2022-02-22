@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 interface ButtonProps {
   $padding?: string
@@ -9,13 +10,14 @@ interface ButtonProps {
 
 export const ButtonWrapper = styled.div``
 
-export const Button = styled.button<ButtonProps>`
+export const Button = styled(motion.button)<ButtonProps>`
   cursor: pointer;
   border: none;
+  border-radius: 36px;
   letter-spacing: 1.75px;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 36px;
+  transform-origin: center center;
 
   padding: ${({ $padding }) => $padding};
   font-size: ${({ $fontSize }) => $fontSize}px;

@@ -1,3 +1,4 @@
+import { ButtonVariants } from './Button.animations'
 import * as S from './Button.styles'
 
 export interface ButtonProps {
@@ -20,6 +21,9 @@ const Button = ({
   return (
     <S.ButtonWrapper>
       <S.Button
+        variants={ButtonVariants}
+        initial="initial"
+        whileHover="hover"
         $padding={padding}
         $fontSize={fontSize}
         $color={color}

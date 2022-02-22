@@ -10,6 +10,9 @@ const StaticNavVariants = {
     },
     active: {
       color: theme.color.white,
+      transition: {
+        duration: 0,
+      },
     },
   },
   bottomNav: {
@@ -21,6 +24,9 @@ const StaticNavVariants = {
     },
     active: {
       opacity: 1,
+      transition: {
+        duration: 0,
+      },
     },
   },
 }
