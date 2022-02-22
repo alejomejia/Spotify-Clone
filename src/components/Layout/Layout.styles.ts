@@ -16,11 +16,11 @@ export const AsideWrapper = styled.aside`
 `
 
 export const MainWrapper = styled.main`
-  background: yellow;
+  background: #0c0c0c;
   grid-column: main;
 `
 
 export const FooterWrapper = styled.footer`
-  background: green;
+  background: #131313;
   grid-column: footer;
 `

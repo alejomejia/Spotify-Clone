@@ -15,4 +15,13 @@ export default createGlobalStyle`
     font-family: 'Circular', Helvetica Neue, sans-serif;
     font-weight: 400;
   }
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.color.nobel};
+  }
 `
