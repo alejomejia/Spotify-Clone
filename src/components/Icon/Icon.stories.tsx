@@ -1,30 +1,21 @@
-import { IconGallery, IconItem } from '@storybook/addon-docs/blocks'
+import { Story, Meta } from '@storybook/react'
 
-import Icon, { SVG } from './Icon'
+import Icon, { IconProps } from './Icon'
 
 export default {
-  title: 'Core/Icons',
+  title: 'Components/Icon',
   component: Icon,
-  parameters: {
-    viewMode: 'docs',
-    previewTabs: {
-      canvas: {
-        hidden: true,
-      },
-    },
+  argTypes: {
+    fill: { control: 'color' },
+    size: { control: 'number' },
   },
-}
+} as Meta
 
-const icons = Object.keys(SVG)
-
-const Template = () => (
-  <IconGallery>
-    {icons.map((name: any, index) => (
-      <IconItem key={index} name={name}>
-        <Icon name={name} />
-      </IconItem>
-    ))}
-  </IconGallery>
-)
+const Template: Story<IconProps> = (args) => <Icon {...args} />
 
 export const Default = Template.bind({})
+
+Default.args = {
+  name: 'home',
+  size: 64,
+}
