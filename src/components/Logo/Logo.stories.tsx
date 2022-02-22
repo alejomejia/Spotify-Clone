@@ -5,7 +5,6 @@ import Logo, { LogoProps } from './Logo'
 export default {
   title: 'Components/Logo',
   component: Logo,
-  decorators: [(Story) => <Story />],
   argTypes: {
     fill: { control: 'color' },
     width: { control: 'text' },
