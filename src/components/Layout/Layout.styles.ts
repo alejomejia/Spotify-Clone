@@ -11,7 +11,7 @@ export const LayoutWrapper = styled.div`
 `
 
 export const AsideWrapper = styled.aside`
-  background: red;
+  background: ${({ theme }) => theme.color.black};
   grid-column: aside;
 `
 

@@ -2,11 +2,12 @@ import * as S from './Logo.styles'
 
 export interface LogoProps {
   fill?: string
+  width?: string
 }
 
-const Logo = ({ fill = 'currentColor' }: LogoProps) => {
+const Logo = ({ fill = 'currentColor', width = '100%' }: LogoProps) => {
   return (
-    <S.LogoWrapper>
+    <S.LogoWrapper $width={width}>
       <svg viewBox="0 0 1134 340">
         <title>Spotify</title>
         <path

@@ -1,10 +1,12 @@
-import Logo from 'components/Logo/Logo'
+import SidebarLogo from './Logo/Logo'
+
+import * as S from './Sidebar.styles'
 
 const Sidebar = () => {
   return (
-    <aside>
-      <Logo />
-    </aside>
+    <S.SidebarWrapper>
+      <SidebarLogo />
+    </S.SidebarWrapper>
   )
 }
 

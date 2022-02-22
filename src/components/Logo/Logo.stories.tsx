@@ -8,17 +8,15 @@ export default {
   decorators: [(Story) => <Story />],
   argTypes: {
     fill: { control: 'color' },
+    width: { control: 'text' },
   },
 } as Meta
 
-const Template: Story<LogoProps> = (args) => (
-  <div style={{ maxWidth: 240 }}>
-    <Logo {...args} />
-  </div>
-)
+const Template: Story<LogoProps> = (args) => <Logo {...args} />
 
 export const Default = Template.bind({})
 
 Default.args = {
   fill: '#000',
+  width: '240px',
 }

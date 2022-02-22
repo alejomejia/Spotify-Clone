@@ -1,3 +1,9 @@
 import styled from 'styled-components'
 
-export const LogoWrapper = styled.div``
+interface LogoWrapperProps {
+  $width: string
+}
+
+export const LogoWrapper = styled.div<LogoWrapperProps>`
+  max-width: ${({ $width }) => $width};
+`
