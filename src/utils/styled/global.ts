@@ -4,12 +4,6 @@ import resetCSS from './reset'
 export default createGlobalStyle`
   ${resetCSS}
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   html,
   body {
     font-family: 'Circular', Helvetica Neue, sans-serif;
@@ -23,5 +17,11 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.color.nobel};
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
   }
 `

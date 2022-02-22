@@ -6,6 +6,9 @@ declare module 'styled-components' {
       black: string
       white: string
       nobel: string
+      codGray: string
+      redViolet: string
+      cornflowerBlue: string
     }
   }
 }
