@@ -17,5 +17,5 @@ export const Default = Template.bind({})
 
 Default.args = {
   name: 'home',
-  size: 64,
+  size: 32,
 }
