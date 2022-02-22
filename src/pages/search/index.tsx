@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Layout from 'components/Layout/Layout'
 
-const HomePage: NextPage = () => {
+const SearchPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -15,4 +15,4 @@ const HomePage: NextPage = () => {
   )
 }
 
-export default HomePage
+export default SearchPage
