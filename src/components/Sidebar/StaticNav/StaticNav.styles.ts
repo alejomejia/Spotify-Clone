@@ -9,12 +9,6 @@ export const StaticNavWrapper = styled.div`
 
 export const Nav = styled.nav``
 
-export const TopNav = styled.div`
-  margin-bottom: 24px;
-`
-
-export const BottomNav = styled.div``
-
 export const List = styled.ul``
 
 export const Item = styled.li``
@@ -47,3 +41,13 @@ export const IconHeartWrapper = styled.div`
 `
 
 export const Label = styled.span``
+
+export const TopNav = styled.div`
+  margin-bottom: 24px;
+`
+
+export const BottomNav = styled.div`
+  ${ItemLink} {
+    color: ${({ theme }) => theme.color.white};
+  }
+`
