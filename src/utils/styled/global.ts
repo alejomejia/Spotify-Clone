@@ -8,6 +8,8 @@ export default createGlobalStyle`
   body {
     font-family: 'Circular', Helvetica Neue, sans-serif;
     font-weight: 400;
+    color: ${({ theme }) => theme.color.nobel};
+    background-color: ${({ theme }) => theme.color.codGray};
   }
 
   ul {

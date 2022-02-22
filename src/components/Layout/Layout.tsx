@@ -1,9 +1,14 @@
 import Sidebar from 'components/Sidebar/Sidebar'
+import Header from 'components/Header/Header'
 import SignUpBar from 'components/SignUpBar/SignUpBar'
 
 import * as S from './Layout.styles'
 
-const Layout = () => {
+interface LayoutProps {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: LayoutProps) => {
   const isUserLoggedIn = false
 
   return (
@@ -11,7 +16,10 @@ const Layout = () => {
       <S.AsideWrapper>
         <Sidebar />
       </S.AsideWrapper>
-      <S.MainWrapper>main</S.MainWrapper>
+      <S.MainWrapper>
+        <Header />
+        <S.MainContent>{children}</S.MainContent>
+      </S.MainWrapper>
       <S.FooterWrapper>
         {!isUserLoggedIn && (
           <SignUpBar

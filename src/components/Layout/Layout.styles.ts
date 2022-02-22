@@ -21,9 +21,12 @@ export const AsideWrapper = styled.aside`
 `
 
 export const MainWrapper = styled.main`
-  background: #0c0c0c;
   grid-area: main;
+  height: 100%;
+  overflow-x: hidden;
 `
+
+export const MainContent = styled.section``
 
 export const FooterWrapper = styled.footer`
   background: #131313;

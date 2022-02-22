@@ -26,6 +26,7 @@ const SignUpBar = ({
         </S.LeftSide>
         <S.RightSide>
           <Button
+            padding="8px 48px"
             color={theme.color.cornflowerBlue}
             backgroundColor={theme.color.white}
             onClick={onButtonClick}
