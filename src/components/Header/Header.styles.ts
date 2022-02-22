@@ -18,13 +18,17 @@ export const HeaderWrapper = styled.header`
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 24px;
   min-height: 100%;
   padding: 12px 32px;
 `
 
-export const ButtonsWrapper = styled.div``
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`
 
 export const LoginWrapper = styled.div`
   display: flex;

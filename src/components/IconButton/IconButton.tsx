@@ -16,7 +16,7 @@ export interface IconButtonProps {
 const IconButton = ({
   iconName = 'home',
   iconSize,
-  padding,
+  padding = 0,
   buttonColor,
   buttonBackground,
   buttonRadius,

@@ -7,7 +7,9 @@ interface ButtonProps {
   $radius?: number
 }
 
-export const IconButtonWrapper = styled.div``
+export const IconButtonWrapper = styled.div`
+  line-height: 0.5;
+`
 
 export const Button = styled.button<ButtonProps>`
   padding: ${({ $padding }) => $padding}px;
@@ -17,6 +19,6 @@ export const Button = styled.button<ButtonProps>`
 
   &[disabled] {
     cursor: default;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 `

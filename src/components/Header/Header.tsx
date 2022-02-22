@@ -1,3 +1,4 @@
+import IconButton from 'components/IconButton/IconButton'
 import Button from 'components/Button/Button'
 
 import theme from 'utils/styled/theme'
@@ -7,7 +8,27 @@ import * as S from './Header.styles'
 const Header = () => (
   <S.HeaderWrapper>
     <S.Container>
-      <S.ButtonsWrapper>Header</S.ButtonsWrapper>
+      <S.ButtonsWrapper>
+        <IconButton
+          iconName="angleLeft"
+          iconSize={22}
+          padding={5}
+          buttonColor={theme.color.white}
+          buttonBackground={theme.color.black}
+          buttonRadius={60}
+          isDisabled
+          onClick={() => alert('Go Prev')}
+        />
+        <IconButton
+          iconName="angleRight"
+          iconSize={22}
+          padding={5}
+          buttonColor={theme.color.white}
+          buttonBackground={theme.color.black}
+          buttonRadius={60}
+          onClick={() => alert('Go Next')}
+        />
+      </S.ButtonsWrapper>
       <S.LoginWrapper>
         <Button
           padding="10px 34px"
