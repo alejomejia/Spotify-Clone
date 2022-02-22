@@ -12,12 +12,12 @@ import * as S from './Icon.styles'
 export const SVG = {
   heart: IconHeart,
   home: IconHome,
-  'home-active': IconHomeActive,
+  homeActive: IconHomeActive,
   library: IconLibrary,
   plus: IconPlus,
-  'library-active': IconLibraryActive,
+  libraryActive: IconLibraryActive,
   search: IconSearch,
-  'search-active': IconSearchActive,
+  searchActive: IconSearchActive,
 } as const
 
 export interface IconProps {
@@ -26,12 +26,16 @@ export interface IconProps {
   size?: number
 }
 
-const Icon = ({ name, fill = '#000', size = 24, ...rest }: IconProps) => {
+const Icon = ({
+  name = 'home',
+  fill = 'currentColor',
+  size = 24,
+}: IconProps) => {
   const IconRenderer = SVG[name]
 
   return (
     <S.IconWrapper $fill={fill} $size={size}>
-      <IconRenderer {...rest} />
+      <IconRenderer />
     </S.IconWrapper>
   )
 }
