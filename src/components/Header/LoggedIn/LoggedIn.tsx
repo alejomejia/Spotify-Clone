@@ -14,6 +14,14 @@ const LoggedIn = () => {
       <Button
         padding="10px 34px"
         fontSize={12}
+        color={theme.color.white}
+        onClick={handleLogout}
+      >
+        Upgrade
+      </Button>
+      <Button
+        padding="10px 34px"
+        fontSize={12}
         backgroundColor={theme.color.white}
         onClick={handleLogout}
       >

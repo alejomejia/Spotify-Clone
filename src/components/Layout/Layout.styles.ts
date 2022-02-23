@@ -7,7 +7,7 @@ interface LayoutWrapperProps {
 export const LayoutWrapper = styled.div<LayoutWrapperProps>`
   min-height: 100%;
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 230px 1fr;
   grid-template-rows: ${({ $isUserLoggedIn }) =>
     $isUserLoggedIn ? '1fr 90px' : '1fr 76px'};
   grid-template-areas:
@@ -24,11 +24,14 @@ export const MainWrapper = styled.main`
   grid-area: main;
   height: 100%;
   overflow-x: hidden;
+  background-image: ${({ theme }) =>
+    `linear-gradient(180deg, ${theme.color.mineShaft}, ${theme.color.codGray} 330px)`};
 `
 
 export const MainContent = styled.section``
 
 export const FooterWrapper = styled.footer`
-  background: #131313;
+  background-color: #131313;
+  border-top: 1px solid ${({ theme }) => theme.color.mineShaft};
   grid-area: footer;
 `

@@ -7,6 +7,7 @@ declare module 'styled-components' {
       white: string
       iron: string
       nobel: string
+      mineShaft: string
       codGray: string
       malachite: string
       redViolet: string
