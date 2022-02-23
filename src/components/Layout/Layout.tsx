@@ -1,3 +1,5 @@
+import { useSession } from 'next-auth/react'
+
 import Sidebar from 'components/Sidebar/Sidebar'
 import Header from 'components/Header/Header'
 import SignUpBar from 'components/SignUpBar/SignUpBar'
@@ -9,19 +11,21 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const isUserLoggedIn = false
+  const { status } = useSession()
+
+  const isUserAuth = status === 'authenticated'
 
   return (
-    <S.LayoutWrapper $isUserLoggedIn={isUserLoggedIn}>
+    <S.LayoutWrapper $isUserLoggedIn={isUserAuth}>
       <S.AsideWrapper>
         <Sidebar />
       </S.AsideWrapper>
       <S.MainWrapper>
-        <Header />
+        <Header isUserAuth={isUserAuth} />
         <S.MainContent>{children}</S.MainContent>
       </S.MainWrapper>
       <S.FooterWrapper>
-        {!isUserLoggedIn && (
+        {!isUserAuth && (
           <SignUpBar
             title="Preview of Spotify"
             description="Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed."

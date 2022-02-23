@@ -1,5 +1,3 @@
-import { useSession } from 'next-auth/react'
-
 import IconButton from 'components/IconButton/IconButton'
 
 import HeaderLoggedIn from './LoggedIn/LoggedIn'
@@ -9,9 +7,11 @@ import theme from 'utils/styled/theme'
 
 import * as S from './Header.styles'
 
-const Header = () => {
-  const { status } = useSession()
+export interface HeaderProps {
+  isUserAuth: boolean
+}
 
+const Header = ({ isUserAuth }: HeaderProps) => {
   return (
     <S.HeaderWrapper>
       <S.Container>
@@ -37,11 +37,7 @@ const Header = () => {
           />
         </S.ButtonsWrapper>
         <S.LoginWrapper>
-          {status === 'authenticated' ? (
-            <HeaderLoggedIn />
-          ) : (
-            <HeaderLoggedOut />
-          )}
+          {isUserAuth ? <HeaderLoggedIn /> : <HeaderLoggedOut />}
         </S.LoginWrapper>
       </S.Container>
     </S.HeaderWrapper>
