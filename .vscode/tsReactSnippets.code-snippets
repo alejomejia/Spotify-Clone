@@ -2,11 +2,11 @@
   "React - Create placeholder FC": {
     "prefix": "reactfc",
     "body": [
-      "import * as S from ./${TM_FILENAME_BASE}.styles",
+      "import * as S from './${TM_FILENAME_BASE}.styles'",
       "",
       "export interface ${TM_FILENAME_BASE}Props {}",
       "",
-      "const ${TM_FILENAME_BASE} = ({}: ${TM_FILENAME_BASE}Props) => <S.${TM_FILENAME_BASE}Wrapper>${TM_FILENAME_BASE}</span>",
+      "const ${TM_FILENAME_BASE} = ({}: ${TM_FILENAME_BASE}Props) => <S.${TM_FILENAME_BASE}Wrapper>${TM_FILENAME_BASE}</S.${TM_FILENAME_BASE}Wrapper>",
       "",
       "export default ${TM_FILENAME_BASE}",
       ""
@@ -18,7 +18,7 @@
     "body": [
       "import styled from 'styled-components'",
       "",
-      "export const ${TM_FILENAME_BASE}Wrapper = styled.div``",
+      "export const ${TM_FILENAME_BASE/(.*)\\..+$/$1/}Wrapper = styled.div``",
       ""
     ],
     "description": "Create styled-components placeholder"
@@ -28,18 +28,18 @@
     "body": [
       "import { Story, Meta } from '@storybook/react'",
       "",
-      "import ${TM_FILENAME_BASE}, { ${TM_FILENAME_BASE}Props } from './${TM_FILENAME_BASE}'",
+      "import ${TM_FILENAME_BASE/(.*)\\..+$/$1/}, { ${TM_FILENAME_BASE/(.*)\\..+$/$1/}Props } from './${TM_FILENAME_BASE/(.*)\\..+$/$1/}'",
       "",
       "export default {",
-      "title: 'Components/${${TM_FILENAME_BASE}'",
-      "components: ${TM_FILENAME_BASE}",
+      "title: 'Components/${TM_FILENAME_BASE/(.*)\\..+$/$1/}',",
+      "component: ${TM_FILENAME_BASE/(.*)\\..+$/$1/},",
       "argTypes: {",
       "// demo: { control: 'text' }",
       "}",
       "} as Meta",
       "",
-      "const Template: Story<${TM_FILENAME_BASE}Props> = (args) => (",
-      "<${TM_FILENAME_BASE} {...args} />",
+      "const Template: Story<${TM_FILENAME_BASE/(.*)\\..+$/$1/}Props> = (args) => (",
+      "<${TM_FILENAME_BASE/(.*)\\..+$/$1/} {...args} />",
       ")",
       "",
       "export const Default = Template.bind({})",
