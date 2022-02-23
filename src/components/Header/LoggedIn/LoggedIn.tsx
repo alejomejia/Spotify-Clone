@@ -1,8 +1,10 @@
 import { signOut } from 'next-auth/react'
 
 import Button from 'components/Button/Button'
+import Avatar from 'components/Avatar/Avatar'
 
 import theme from 'utils/styled/theme'
+import avatar from '@assets/avatar.jpeg'
 
 import * as S from './LoggedIn.styles'
 
@@ -11,6 +13,7 @@ const LoggedIn = () => {
 
   return (
     <S.LoggedInWrapper>
+      <Avatar src={avatar} alt="test" />
       <Button
         padding="10px 34px"
         fontSize={12}
