@@ -8,7 +8,10 @@ export default {
   title: 'Components/Avatar',
   component: Avatar,
   argTypes: {
-    // isUserAuth: { control: 'boolean' },
+    src: { control: 'text' },
+    alt: { control: 'text' },
+    size: { control: 'number' },
+    variant: { control: { type: 'select', options: ['circle', 'square'] } },
   },
 } as Meta
 
