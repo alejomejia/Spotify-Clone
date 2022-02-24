@@ -11,6 +11,15 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    default: 'spotify',
+    values: [
+      {
+        name: 'spotify',
+        value: '#181818',
+      },
+    ],
+  },
 }
 
 export const decorators = [
