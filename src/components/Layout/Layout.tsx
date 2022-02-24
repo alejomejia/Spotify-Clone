@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
         <S.MainContent>{children}</S.MainContent>
       </S.MainWrapper>
       <S.FooterWrapper>
-        {!isUserAuth && (
+        {status === 'unauthenticated' && (
           <SignUpBar
             title="Preview of Spotify"
             description="Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed."

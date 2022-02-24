@@ -12,6 +12,9 @@ export default {
         hidden: true,
       },
     },
+    backgrounds: {
+      default: 'light',
+    },
   },
 }
 

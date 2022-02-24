@@ -1,5 +1,6 @@
 import IconAngleLeft from './svgs/angle-left'
 import IconAngleRight from './svgs/angle-right'
+import IconDownload from './svgs/download'
 import IconHeart from './svgs/heart'
 import IconHome from './svgs/home'
 import IconHomeActive from './svgs/home-active'
@@ -14,6 +15,7 @@ import * as S from './Icon.styles'
 export const SVG = {
   angleLeft: IconAngleLeft,
   angleRight: IconAngleRight,
+  download: IconDownload,
   heart: IconHeart,
   home: IconHome,
   homeActive: IconHomeActive,

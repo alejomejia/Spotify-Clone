@@ -18,6 +18,10 @@ export const parameters = {
         name: 'spotify',
         value: '#181818',
       },
+      {
+        name: 'light',
+        value: '#fff',
+      },
     ],
   },
 }

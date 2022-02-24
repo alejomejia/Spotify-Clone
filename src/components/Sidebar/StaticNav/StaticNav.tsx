@@ -8,7 +8,6 @@ import theme from 'utils/styled/theme'
 import * as S from './StaticNav.styles'
 import { topItems } from './StaticNav.utils'
 import StaticNavVariants from './StaticNav.animations'
-import path from 'path/posix'
 
 const StaticNav = () => {
   const router = useRouter()
