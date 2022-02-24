@@ -4,6 +4,7 @@ import Button from 'components/Button/Button'
 import Avatar from 'components/Avatar/Avatar'
 
 import theme from 'utils/styled/theme'
+
 import avatar from '@assets/avatar.jpeg'
 
 import * as S from './LoggedIn.styles'
