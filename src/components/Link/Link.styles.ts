@@ -12,4 +12,8 @@ export const Link = styled.a<LinkProps>`
   color: ${({ $color, theme }) => $color || theme.color.nobel};
   font-size: ${({ $fontSize }) => $fontSize || 11}px;
   font-weight: ${({ $fontWeight }) => $fontWeight || 400};
+
+  &:hover {
+    text-decoration: underline;
+  }
 `

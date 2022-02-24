@@ -1,6 +1,6 @@
+import { useState, useEffect } from 'react'
 import NextLink from 'next/link'
 
-import { isExternalLink } from './Link.utils'
 import * as S from './Link.styles'
 
 export interface LinkProps {
@@ -18,7 +18,15 @@ const Link = ({
   fontSize,
   fontWeight,
 }: LinkProps) => {
-  const isExternal = isExternalLink(href)
+  const [isExternal, setIsExternal] = useState(false)
+
+  const isExternalLink = (url: string) => {
+    const anchor = document.createElement('a')
+    anchor.href = url
+    setIsExternal(anchor.host !== window.location.host)
+  }
+
+  useEffect(() => isExternalLink(href), [href])
 
   return (
     <S.LinkWrapper>
