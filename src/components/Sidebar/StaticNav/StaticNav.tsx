@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import Icon from 'components/Icon/Icon'
 
 import theme from 'utils/styled/theme'
+import { LinkVariant } from 'utils/animations'
 
 import * as S from './StaticNav.styles'
 import { topItems } from './StaticNav.utils'
@@ -19,7 +20,7 @@ const StaticNav = () => {
       <S.Item key={id}>
         <Link href={path} passHref>
           <S.ItemLink
-            variants={StaticNavVariants.topNav}
+            variants={LinkVariant}
             initial="initial"
             animate={isPathActive ? 'active' : 'initial'}
             whileHover="hover"

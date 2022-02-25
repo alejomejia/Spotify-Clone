@@ -1,19 +1,29 @@
+import { LinkVariant } from 'utils/animations'
+
 import * as S from './Playlists.styles'
 
-export interface PlaylistsProps {}
-
-const Playlists = ({}: PlaylistsProps) => {
-  const allPlaylists = Array(9).fill('Playlist here...')
+const Playlists = () => {
+  const allPlaylists = Array(30).fill('Playlist is here...')
 
   return (
     <S.PlaylistsWrapper>
-      <S.ContentWrapper>
-        <S.ListWrapper>
+      <S.Nav>
+        <S.List>
           {allPlaylists.map((playlist, index) => (
-            <div key={index}>{playlist}</div>
+            <S.ListItem key={index}>
+              <S.Link
+                href="/"
+                variants={LinkVariant}
+                initial="initial"
+                animate="initial"
+                whileHover="hover"
+              >
+                {playlist}
+              </S.Link>
+            </S.ListItem>
           ))}
-        </S.ListWrapper>
-      </S.ContentWrapper>
+        </S.List>
+      </S.Nav>
     </S.PlaylistsWrapper>
   )
 }

@@ -1,6 +1,6 @@
 import theme from 'utils/styled/theme'
 
-const DownloadAppVariants = {
+export const LinkVariant = {
   initial: {
     color: theme.color.nobel,
   },
@@ -14,5 +14,3 @@ const DownloadAppVariants = {
     },
   },
 }
-
-export default DownloadAppVariants

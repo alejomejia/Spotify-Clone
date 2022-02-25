@@ -2,7 +2,8 @@ import { useRouter } from 'next/router'
 
 import Icon from 'components/Icon/Icon'
 
-import DownloadAppVariants from './DownloadApp.animations'
+import { LinkVariant } from 'utils/animations'
+
 import * as S from './DownloadApp.styles'
 
 const DownloadApp = ({}) => {
@@ -19,7 +20,7 @@ const DownloadApp = ({}) => {
     <S.DownloadAppWrapper>
       <S.ButtonWrapper>
         <S.Button
-          variants={DownloadAppVariants}
+          variants={LinkVariant}
           initial="initial"
           animate={isPathActive ? 'active' : 'initial'}
           whileHover="hover"
