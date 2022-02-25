@@ -26,4 +26,14 @@ export default createGlobalStyle`
     border: none;
     background-color: transparent;
   }
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.3)
+  }
 `

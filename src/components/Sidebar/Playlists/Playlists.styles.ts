@@ -5,7 +5,7 @@ export const PlaylistsWrapper = styled.div`
   top: 0;
   bottom: 0;
   width: 100%;
-  padding: 8px 0 40px;
+  margin: 8px 0 40px 0;
   overflow-x: hidden;
 `
 
