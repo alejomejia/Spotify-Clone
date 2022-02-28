@@ -1,24 +1,31 @@
+import { useState, useEffect } from 'react'
+
+import useSpotify from 'hooks/useSpotify'
 import { LinkVariant } from 'utils/animations'
 
 import * as S from './Playlists.styles'
 
 const Playlists = () => {
-  const allPlaylists = Array(30).fill('Playlist is here...')
+  const { playlists } = useSpotify()
+
+  useEffect(() => {
+    console.log(playlists)
+  }, [playlists])
 
   return (
     <S.PlaylistsWrapper>
       <S.Nav>
         <S.List>
-          {allPlaylists.map((playlist, index) => (
-            <S.ListItem key={index}>
+          {playlists.map(({ id, name }) => (
+            <S.ListItem key={id}>
               <S.Link
-                href="/"
+                href={`/playlist/${id}`}
                 variants={LinkVariant}
                 initial="initial"
                 animate="initial"
                 whileHover="hover"
               >
-                {playlist}
+                {name}
               </S.Link>
             </S.ListItem>
           ))}

@@ -9,7 +9,7 @@ export const LayoutWrapper = styled.div<LayoutWrapperProps>`
   display: grid;
   grid-template-columns: 230px 1fr;
   grid-template-rows: ${({ $isUserLoggedIn }) =>
-    $isUserLoggedIn ? 'calc(100vh - 90px) 90px' : 'calc(100vh - 90px) 76px'};
+    $isUserLoggedIn ? 'calc(100vh - 90px) 90px' : 'calc(100vh - 76px) 76px'};
   grid-template-areas:
     'aside    main'
     'footer   footer';
