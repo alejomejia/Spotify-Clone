@@ -2,13 +2,17 @@ import { useState, useEffect } from 'react'
 import { useSession, signIn } from 'next-auth/react'
 
 import spotifyAPI from 'utils/lib/spotify'
-import { getAllPlaylists } from 'utils/lib/spotify/services'
+import * as SPT from 'services/spotify'
 
-const useSpotify = () => {
+const useSpotify = ({ playlistId = '' }) => {
   const { data: session } = useSession()
+
+  const [playlist, setPlaylist] = useState({})
   const [playlists, setPlaylists] = useState([])
 
   useEffect(() => {
+    console.log(spotifyAPI)
+
     if (session) {
       session.error === 'RefreshAccessTokenError' && signIn()
 
@@ -16,12 +20,15 @@ const useSpotify = () => {
 
       // Playlists
       if (spotifyAPI.getAccessToken()) {
-        getAllPlaylists().then((playlists) => setPlaylists(playlists))
+        playlistId &&
+          SPT.getPlaylist(playlistId).then((playlist) => setPlaylist(playlist))
+
+        SPT.getAllPlaylists().then((playlists) => setPlaylists(playlists))
       }
     }
-  }, [session])
+  }, [session, playlistId])
 
-  return { session, playlists }
+  return { session, playlist, playlists }
 }
 
 export default useSpotify
