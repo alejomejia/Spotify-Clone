@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -9,7 +8,7 @@ import * as S from './Playlists.styles'
 
 const Playlists = () => {
   const router = useRouter()
-  const { playlists } = useSpotify({})
+  const { playlists } = useSpotify()
 
   return (
     <S.PlaylistsWrapper>

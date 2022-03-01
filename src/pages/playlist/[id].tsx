@@ -8,9 +8,8 @@ import useSpotify from 'hooks/useSpotify'
 
 const PlaylistsPage: NextPage = () => {
   const router = useRouter()
-  const { playlist } = useSpotify({ playlistId: router.query.id })
-
-  console.log(playlist)
+  const playlistId = router.query.id as string
+  const { playlist } = useSpotify(playlistId)
 
   return (
     <>
@@ -20,7 +19,7 @@ const PlaylistsPage: NextPage = () => {
         <div>
           {playlist.tracks &&
             playlist.tracks.items.map((track) => (
-              <div key="id">
+              <div key={track.id}>
                 {track.track.name} - {track.track.artists[0].name}
               </div>
             ))}
